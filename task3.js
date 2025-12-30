@@ -2,11 +2,12 @@
 var chunk = function (arr, size) {
     let newArr = []
     let berapax = arr.length / size
-    for (i = 0; i < arr.length; i++) {
-        for (let j = 0; j < berapax; j++) {
-            newArr[j] = []
-            for (let k = 0; k < size; k++) {
-                newArr[j][newArr[j]] = arr[i]
+    for (let j = 0; j < berapax; j++) {
+        newArr[j] = []
+        for (let k = 0; k < size; k++) {
+            for (i = 0; i < arr.length; i++) {
+                console.log(arr[i])
+                newArr[j][k] = arr[i]
             }
         }
     }
